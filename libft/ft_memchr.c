@@ -7,8 +7,8 @@ void    *ft_memchr(const void *s, int c, size_t n){
         i = 0;
         poin = '\0';
         while (i != n){
-            if(s[i] == c){
-                poin = (char *)s[i];
+            if(((unsigned char *)s)[i] == (char)c){
+                poin = (char *)&s[i];
                 break ;
             }
             i++;
