@@ -1,37 +1,31 @@
 #include <stdio.h>
+#include <unistd.h>
+
 
 void ft_memcpy(char *dest,char *src,int size_n){
     int     i;
 
     i = 0;
 
-    while (size_n != 0){
-
+    while (i != size_n){     
         dest[i] = src[i];
-
         i++;
-        size_n--;
     }
-    printf("%c \n",dest[0]);
-    printf("%c \n",src[0]);
 
-/*
-    while (size_n != 0){
-        size_n --;
-    }
-*/
 }
 
 int main(){
 
-    char    *dest;
-    char    *src;
+    char    dest[50] = "destination";
+    char    src[50] = "sourceeeeee";
+    
+    char    *dest_point;
+    char    *src_point;
     int     n_bytes;
 
     n_bytes = 4;
-    dest = "destination";
-    src = "sourceeeeee";
 
     ft_memcpy(dest, src, n_bytes);
 
+    printf("%s",dest);
 }
