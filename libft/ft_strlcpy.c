@@ -12,20 +12,20 @@
 
 #include <stdio.h>
 
-int ft_strlcpy(char *dest,char *src, int n_size){
-    int     i;
+int	ft_strlcpy(char *dest, char *src, int n_size)
+{
+	int	i;
 
-    i = 0;
-    while (src[i] != '\0' && i < n_size){
-        dest[i] = src[i];
-        i++;
-    }
-    dest[i] = '\0';
-
-    printf("%s",dest);
-    return i;
+	i = 0;
+	while (src[i] != '\0' && i < n_size)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (i);
 }
-
+/*
 int main(){
     char dest[20] = "destination";
     char src[20] = " source";
@@ -34,3 +34,4 @@ int main(){
     n = 4;
     ft_strlcpy(dest,src,n);
 }
+*/

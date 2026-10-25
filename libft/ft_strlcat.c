@@ -10,25 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+void	ft_strlcat(char *dest, char *src, int n_size)
+{
+	int		i;
+	int		y;
 
-void    ft_strlcat(char *dest, char *src, int n_size){
-    int     i;
-    int     y;
-
-    i = 0;
-    y = 0;
-
-    while (dest[i] != '\0')
-        i++;
-    while (src[y] != '\0'){
-        dest[i] = src[y];
-        i++;
-        y++;
-    }
-    dest[i] = '\0';
+	i = 0;
+	y = 0;
+	while (dest[i] != '\0')
+		i++;
+	while (src[y] != '\0')
+	{
+		dest[i] = src[y];
+		i++;
+		y++;
+	}
+	dest[i] = '\0';
 }
-
+/*
 int main(){
     char    src[30] = "source";
     char    dest[30] = "destination";
@@ -40,3 +39,4 @@ int main(){
 
     printf("%s",dest);
 }
+*/

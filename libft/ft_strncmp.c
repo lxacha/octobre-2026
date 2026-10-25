@@ -6,25 +6,27 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:46:35 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/10/25 22:46:37 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/10/25 23:54:24 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int    ft_strncmp(const char *s1, const char *s2 , size_t n){
-        int     i;
-        int     y;
-        
-        i = 0;
-        y = 0;
-        while (i != n){
-            y = y + (s1[i] - s2[i]);
-            i++;
-        }
-        return y;
-}
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+	int		i;
+	int		y;
 
+	i = 0;
+	y = 0;
+	while (i != n)
+	{
+		y = y + (s1[i] - s2[i]);
+		i++;
+	}
+	return (y);
+}
+/*
 int main(){
     char    phrase1[10] = "unicorn";
     char    phrase2[10] = "horse";
@@ -35,3 +37,4 @@ int main(){
 
     return 0;
 }
+*/
