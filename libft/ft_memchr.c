@@ -1,25 +1,31 @@
 #include <stdio.h>
 
-void    *ft_memchr(const void *s, int c, size_t n){
-        int     i;
-        char    *poin;
+void *ft_memchr(const void *s, int c, size_t n){
+    int     i;
+    unsigned char *b;
 
-        i = 0;
-        poin = '\0';
-        while (i != n){
-            if(((unsigned char *)s)[i] == (char)c){
-                poin = (char *)&s[i];
-                break ;
-            }
-            i++;
+    i = 0;
+    b = NULL;
+    while (i != n){
+        
+        if (((unsigned char *)s)[i] == (unsigned char )c){
+            b = (unsigned char *)&s[i];
+            break ;
         }
-        return poin;
+        n++;
+        i++;
+    }
+    return b;
 }
 
-int     main(){
-    char    str[20] = "where da damn dawg";
+int main(){
+    char    *str_1 = "where is the damn dog";
     char    a;
+    int     size_a;
 
+    size_a = 4;
     a = 'a';
-    ft_memchr(str, a, 9);
+    ft_memchr(str_1, a, size_a);
+
+    return 0;
 }
