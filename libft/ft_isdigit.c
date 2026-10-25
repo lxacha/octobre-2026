@@ -1,17 +1,18 @@
-#include <ctype.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/25 22:44:52 by leolefeb          #+#    #+#             */
+/*   Updated: 2026/10/25 23:05:38 by leolefeb         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int main(int argc,char **argv){
-    int     a;
-
-    a = *argv[1];
-
-    if ((a >= 48 && a<= 57)){
-        printf("a \n");
-        return 1024;
-    }
-    else{
-        printf("b \n");
-        return 0;
-    }
+int	ft_isdigit(int a)
+{
+	if (a >= 48 && a <= 57)
+		return (1);
+	return (0);
 }

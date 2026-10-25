@@ -1,17 +1,28 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/25 22:45:53 by leolefeb          #+#    #+#             */
+/*   Updated: 2026/10/25 23:09:50 by leolefeb         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_memset(char *a,int c, int n){
-    int     i;
+void	ft_memset(char *a, int c, int n)
+{
+	int	i;
 
-    i = 0;
-
-    while (n != 0){
-        a[i] = c + '0';
-        i++;
-        n--;
-    }
+	i = 0;
+	while (n != 0)
+	{
+		a[i] = c + '0';
+		i++;
+		n--;
+	}
 }
-
+/*
 int main(int argc,char **argv){
 
     char *a = argv[1];
@@ -28,4 +39,4 @@ int main(int argc,char **argv){
     }
     return 0;
 }
-
+*/

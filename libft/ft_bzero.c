@@ -1,15 +1,26 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/25 22:44:05 by leolefeb          #+#    #+#             */
+/*   Updated: 2026/10/25 23:15:32 by leolefeb         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_bzero(char *a,int n){
-
-    while(n != 0){
-        a[0] = '\0';
-        a++;
-        n--;
-    }
-
+void	ft_bzero(char *a, int n)
+{
+	while (n != 0)
+	{
+		a[0] = '\0';
+		a++;
+		n--;
+	}
 }
 
+/*
 int main(int argc, char **argv){
     char    *a;
     int     n;
@@ -21,3 +32,4 @@ int main(int argc, char **argv){
     
     return 0;
 }
+*/

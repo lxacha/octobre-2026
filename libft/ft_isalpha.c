@@ -1,21 +1,18 @@
-#include <ctype.h>
-#include <stdio.h>
-/*
-int main(){
-    printf("%d\n",isalpha(' '));
-}
-*/
-int main(int argc,char **argv){
-    int     a;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/25 22:44:22 by leolefeb          #+#    #+#             */
+/*   Updated: 2026/10/25 23:08:05 by leolefeb         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    a = *argv[1];
-
-    if ((a >= 65 && a<= 90) || (a >= 97 && a<= 122)){
-        printf("a \n");
-        return 1024;
-    }
-    else{
-        printf("b \n");
-        return 0;
-    }
+int	ft_isalpha(int a)
+{
+	if ((a >= 65 && a <= 90) || (a >= 97 && a <= 122))
+		return (1);
+	return (0);
 }

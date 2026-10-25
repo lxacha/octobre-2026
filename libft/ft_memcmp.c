@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/25 22:45:23 by leolefeb          #+#    #+#             */
+/*   Updated: 2026/10/25 22:45:26 by leolefeb         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h> /// ne pas rendre tel quel, include dans le fichier header 
 
 int ft_memcmp(const void *s1, const void *s2, size_t n){

@@ -1,13 +1,28 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/25 22:44:44 by leolefeb          #+#    #+#             */
+/*   Updated: 2026/10/25 23:00:05 by leolefeb         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int main(int argc,char **argv){
-    int     a;
-    a = argv[1][0];
+int	ft_isascii(int a)
+{
+	if ((a >= 0 && a <= 127))
+	{
+		return (1);
+	}
+	return (0);
+}
 
-    if ((a >= 0 && a<= 127)){
-        printf("a \n");
-        return 1024;
-    }
-    printf("b \n");
-    return 0;
+int	main(int argc, char **argv)
+{
+	char	c;
+
+	c = 'a';
+	ft_isascii(c);
 }
