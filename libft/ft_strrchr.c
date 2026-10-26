@@ -6,9 +6,11 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:46:55 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/10/25 23:52:44 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/10/26 14:40:35 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	ft_strrchr(const char *s, int c)
 {

@@ -6,9 +6,11 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:45:44 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/10/25 23:43:24 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/10/26 14:41:49 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_memmove(char *dest, char *src, int n_size)
 {

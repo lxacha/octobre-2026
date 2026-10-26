@@ -6,9 +6,11 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:44:05 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/10/25 23:15:32 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/10/26 14:43:17 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_bzero(char *a, int n)
 {

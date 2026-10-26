@@ -6,11 +6,12 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:46:45 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/10/26 00:11:50 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/10/26 14:40:34 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
 int	size_of(const char *s)
 {

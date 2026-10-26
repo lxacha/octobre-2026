@@ -6,9 +6,11 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:45:36 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/10/25 23:40:45 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/10/26 14:41:48 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_memcpy(char *dest, char *src, int size_n)
 {

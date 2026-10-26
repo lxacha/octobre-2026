@@ -6,11 +6,12 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:45:14 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/10/25 23:57:50 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/10/26 14:41:47 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

@@ -6,9 +6,11 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:43:27 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/10/26 00:07:17 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/10/26 14:43:18 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {

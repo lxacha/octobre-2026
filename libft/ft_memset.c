@@ -6,9 +6,11 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:45:53 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/10/25 23:09:50 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/10/26 14:41:20 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_memset(char *a, int c, int n)
 {
