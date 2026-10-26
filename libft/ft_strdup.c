@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-int		size_of(const char *str)
+int		ft_strlen(const char *str)
 {
 	int	i;
 
@@ -16,7 +16,7 @@ char	*ft_strdup(const char *s)
 	int		i;
 
 	i = 0;
-	dup = malloc(sizeof(char) * size_of(s));
+	dup = malloc(sizeof(char) * ft_strlen(s));
 	while (s[i] != '\0'){
 		dup[i] = s[i];
 		i++;
