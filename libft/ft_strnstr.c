@@ -6,7 +6,7 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:46:45 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/10/26 00:03:48 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/10/26 00:11:50 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 /*
 int main(){
     char    *str1 = "Welcome to dog town, fuck taxes, fuck corpos if you agree 
-	you've come to the right place just follow my rules";
+	you've come to the right place just follow the rules";
     char    *s2 = "taxes";
     int     size_1;
 
