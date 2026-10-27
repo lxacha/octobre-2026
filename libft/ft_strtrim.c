@@ -29,14 +29,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 		x++;
 	}
+	return (cop);
 }
 
-int		main()
-{
-	char	*s1 = "this is the@life we# live";
-	char	*char_rm = "#@";
-	char	*copy;
+// int		main()
+// {
+// 	char	*s1 = "this is the@life we# live";
+// 	char	*char_rm = "#@";
+// 	char	*copy;
 
-	copy = ft_strtrim(s1, char_rm);
-	free(copy);
-}
+// 	copy = ft_strtrim(s1, char_rm);
+// 	free(copy);
+// }

@@ -6,7 +6,7 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:45:23 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/10/26 14:41:47 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/10/27 21:00:35 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int		i;
+	unsigned long		i;
 	int		eq;
 
 	i = 0;

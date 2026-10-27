@@ -2,16 +2,6 @@
 #include <stdlib.h>
 #include "libft.h"
 
-int		ft_strlen(const char *s)
-{
-	int		i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
-
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char *conc_s1_s2;
@@ -36,11 +26,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (conc_s1_s2);
 }
 
-int	main()
-{
-	char	*s1 = "phrase n1";
-	char	*s2 = " phrase n2";
+// int	main()
+// {
+// 	char	*s1 = "phrase n1";
+// 	char	*s2 = " phrase n2";
 	
-	ft_strjoin(s1, s2);
-	return (0);
-}
+// 	ft_strjoin(s1, s2);
+// 	return (0);
+// }

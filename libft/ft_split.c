@@ -1,16 +1,6 @@
 #include <stdlib.h>
 #include "libft.h"
 
-int		ft_strlen(const char *s)
-{
-	int		i;
-
-	i = 0;
-	while(s[i] != '\0')
-		i++;
-	return (i);
-}
-
 char **ft_split(char const *s, char c)
 {
 	char	**phrases;
@@ -41,9 +31,9 @@ char **ft_split(char const *s, char c)
 	return (phrases);
 }
 
-int		main()
-{
-	char *s1 = "this is ,phrase one, phrase two , ...";	
-	char	c = ',';
-	ft_split(s1, c);
-}
+// int		main()
+// {
+// 	char *s1 = "this is ,phrase one, phrase two , ...";	
+// 	char	c = ',';
+// 	ft_split(s1, c);
+// }

@@ -12,16 +12,16 @@
 
 #include "libft.h"
 
-void	ft_strlcat(char *dest, char *src, int n_size)
+void	ft_strlcat(char *dest, char *src, size_t size)
 {
-	int		i;
-	int		y;
+	unsigned long		i;
+	unsigned long		y;
 
 	i = 0;
 	y = 0;
 	while (dest[i] != '\0')
 		i++;
-	while (src[y] != '\0')
+	while (src[y] != '\0' && y <= size)
 	{
 		dest[i] = src[y];
 		i++;

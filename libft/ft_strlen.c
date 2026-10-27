@@ -6,13 +6,13 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:46:28 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/10/26 14:40:26 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/10/27 20:41:50 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *s1)
+int	ft_strlen(const char *s1)
 {
 	int	a;
 

@@ -13,12 +13,13 @@
 #include <stdio.h>
 #include "libft.h"
 
-char	ft_strchr(char *str, int c)
+char	*ft_strchr(char *str, int c)
 {
 	char	*point_f;
 	int		i;
 
 	i = 0;
+	point_f = NULL;
 	while (str[i] != '\0')
 	{
 		if (str[i] == c)
@@ -28,7 +29,7 @@ char	ft_strchr(char *str, int c)
 		}
 		i++;
 	}
-	return (*point_f);
+	return (point_f);
 }
 /*
 int main(){

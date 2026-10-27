@@ -6,7 +6,7 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:44:44 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/10/26 14:42:11 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/10/27 21:26:54 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,12 @@ int	ft_isascii(int a)
 	}
 	return (0);
 }
-
-int	main(int argc, char **argv)
+/*
+int	main()
 {
 	char	c;
 
 	c = 'a';
 	ft_isascii(c);
 }
+*/

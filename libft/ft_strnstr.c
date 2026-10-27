@@ -6,7 +6,7 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:46:45 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/10/26 14:40:34 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/10/27 21:26:03 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	size_of(const char *s)
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int		i;
+	unsigned long	i;
 	int		y;
 	char	*occur;
 

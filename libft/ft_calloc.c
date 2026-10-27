@@ -10,7 +10,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	poin = malloc(nmemb * size);
 	return (poin);
 }
-
+/*
 int	main(){
 	void	*pointer;
 
@@ -18,3 +18,4 @@ int	main(){
 	free(pointer);
 	return (0);
 }
+*/

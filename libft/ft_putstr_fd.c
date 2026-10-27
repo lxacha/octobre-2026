@@ -13,8 +13,8 @@ void ft_putstr_fd(char *s, int fd)
 	}
 }
 
-int main()
-{
-	char *s1 = "fuck taxes , fuck corpos, to the top of arasaka tower !";
-	ft_putstr_fd(s1, 1);
-}
+// int main()
+// {
+// 	char *s1 = "fuck taxes , fuck corpos, to the top of arasaka tower !";
+// 	ft_putstr_fd(s1, 1);
+// }

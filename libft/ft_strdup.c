@@ -1,16 +1,6 @@
 #include <stdlib.h>
 #include "libft.h"
 
-int		ft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
 char	*ft_strdup(const char *s)
 {
 	char	*dup;
@@ -25,11 +15,11 @@ char	*ft_strdup(const char *s)
 	return (dup);
 }
 
-int main()
-{
-	char	*s1 = "phrase 1";
-	char	*s2;
+// int main()
+// {
+// 	char	*s1 = "phrase 1";
+// 	char	*s2;
 
-	s2 = ft_strdup(s1);
-	free(s2);
-}
+// 	s2 = ft_strdup(s1);
+// 	free(s2);
+// }

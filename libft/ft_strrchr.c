@@ -6,7 +6,7 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:46:55 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/10/26 14:40:35 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/10/27 21:27:55 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ char	ft_strrchr(const char *s, int c)
 	char	*d;
 
 	i = 0;
+	d = NULL;
 	while (s[i] != '\0')
 		i++;
 	while (i != 0)
@@ -29,7 +30,7 @@ char	ft_strrchr(const char *s, int c)
 		}
 		i--;
 	}
-	return (d);
+	return (*d);
 }
 /*
 int main(){

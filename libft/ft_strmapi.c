@@ -1,21 +1,15 @@
 #include <stdlib.h>
 #include "libft.h"
 
-static int		ft_strlen(const char *s)
-{
-	int		i;
-	i = 0;
-
-	while(s[i] != '\0')
-		i++;
-	return (i);
-}
-
-static char	function_n_1(unsigned int d,char a)
-{
-	a = 'B';
-	return a;
-}
+// static char	function_n_1(unsigned int d,char a)
+// {
+// 	a = 'B';
+// 	if (d >= 0)
+// 	{
+// 		return a;
+// 	}
+// 	return a;
+// }
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -32,7 +26,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (new_str);
 }
 
-int main(){
-	char	*a = "AAAAAAAAAA";
-	ft_strmapi(a,function_n_1);
-}
+// int main(){
+// 	char	*a = "AAAAAAAAAA";
+// 	ft_strmapi(a,function_n_1);
+// }
