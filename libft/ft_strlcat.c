@@ -18,14 +18,14 @@ size_t	ft_strlcat(char *dest, char *src, size_t size)
 	size_t		i;
 	size_t		y;
 	
-	i = 0;
+	i_len = 0;
 	y = 0;
 	if (size == 0)
 		return (ft_strlen(src));
-	if (size < (size_t)ft_strlen(dest))
-		return (size + ft_strlen(src));
 	if (size == (size_t)ft_strlen(dest))
 		return (ft_strlen(src) + ft_strlen(dest));
+	if (size < (size_t)ft_strlen(dest))
+		return (size + ft_strlen(src));
 	while (dest[i] != '\0')
 		i++;
 	while (src[y] != '\0' && y + ft_strlen(dest) <= size)
