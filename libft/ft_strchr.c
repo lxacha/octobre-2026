@@ -17,21 +17,20 @@ char	*ft_strchr(const char *str, int c)
 {
 	const char	*point_f;
 	int		i;
-	int		bool1;
 
-	bool1 = 0;
 	i = 0;
 	point_f = NULL;
-	if (str[0] == '\0' && c == 0)
+
+	if (str[0] == '\0' && (unsigned char)c == 0)
 		point_f = &str[0];
 	while (str[i] != '\0' )
 	{
-		if (str[i+1] == '\0' && c == 0)
+		if (str[i+1] == '\0' && (unsigned char)c == 0)
 		{
 			point_f = &str[i+1];
 			return ((char *)point_f);
 		}
-		if (str[i] == c)
+		if (str[i] == (unsigned char)c)
 		{
 			point_f = &str[i];
 			break ;
@@ -45,6 +44,6 @@ char	*ft_strchr(const char *str, int c)
 //     char    str1[20] = "str nbr 1 ...";
 //     char    a;
 
-//     a = '\0';
-//     ft_strchr(str1,a);
+//     a = 't';
+//     ft_strchr(str1,a+256);
 // }

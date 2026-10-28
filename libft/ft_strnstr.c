@@ -6,7 +6,7 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:46:45 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/10/27 21:26:03 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/10/28 11:04:01 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,25 +25,28 @@ int	size_of(const char *s)
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	unsigned long	i;
-	int		y;
+	size_t	i;
+	size_t	y;
 	char	*occur;
 
 	i = 0;
 	y = 0;
 	occur = NULL;
-	if (size_of(little) == 0)
+	if (ft_strlen(little) == 0)
 		return ((char *)big);
-	while (i != len && big[i] != '\0')
+	while (i <= len && big[i] != '\0')
 	{
-		while (y <= size_of(little))
+		while (y <= ((size_t)ft_strlen(little)) && little[y] != '\0')
 		{
+			if (i >= len)
+				break;
 			if (big[i] != little[y])
 			{
+				i = i - y;
 				y = 0;
 				break ;
 			}
-			if (y == size_of(little) -1)
+			if (y == ((size_t)ft_strlen(little)) -1)
 			{
 				occur = (char *)&big[i - size_of(little) + 1];
 				return (occur);
@@ -55,16 +58,14 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-/*
-int main(){
-    char    *str1 = "Welcome to dog town, fuck taxes, fuck corpos if you agree 
-	you've come to the right place just follow the rules";
-    char    *s2 = "taxes";
-    int     size_1;
 
-    size_1 = 50;
+// int main(){
+//     // char    *str1 = "Welcome to dog town, fuck taxes, fuck corpos ";
+//     // char    *s2 = "taxes";
+//     int     size_1;
 
-    ft_strnstr(str1 ,s2 , size_1);
-    return 0;
-}
-*/
+//     size_1 = 50;
+
+//     ft_strnstr("abcabcabd", "abcabd", 9);
+//     return 0;
+// }

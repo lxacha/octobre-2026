@@ -6,7 +6,7 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:46:55 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/10/28 03:11:00 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/10/28 09:08:01 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 	d = NULL;
 	while (i >= 0)
 	{
-		if (s[i] == c)
+		if (s[i] == (unsigned char)c)
 		{
 			d = (char *)&s[i];
 			break ;
