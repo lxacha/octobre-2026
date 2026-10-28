@@ -6,7 +6,7 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:46:35 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/10/28 02:25:26 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/10/28 07:18:38 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,15 @@
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t		i;
-	int		y;
+	unsigned char		y;
 
 	i = 0;
 	y = 0;
 	while (i != n && (s1[i] != '\0' || s2[i] != '\0'))
 	{
-		y = y + (s1[i] - s2[i]);
+		// y = s1[i] - s2[i];
+		if (((unsigned char *)s1)[i] != ((unsigned char *)s2)[i])
+			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 		i++;
 	}
 	return (y);
@@ -38,3 +40,5 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 //     return 0;
 // }
+
+// pourquoi unsigned char - unsigned char = int ????

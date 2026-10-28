@@ -6,32 +6,33 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:45:14 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/10/28 06:32:41 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/10/28 07:04:26 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-// void	*ft_memchr(const void *s, int c, size_t n)
-// {
-// 	unsigned long			i;
-// 	unsigned char	*b;
+void	*ft_memchr(const void *s, int c, size_t n)
+{
+	unsigned long			i;
+	//unsigned char	*b;
 
-// 	i = 0;
-// 	b = 0;
-// 	while (i != n)
-// 	{
-// 		if (((unsigned char *)s)[i] == (unsigned char )c)
-// 		{
-// 			b = (unsigned char *)&s[i];
-// 			break ;
-// 		}
-// 		n++;
-// 		i++;
-// 	}
-// 	return (b);
-// }
+	i = 0;
+	//b = 0;
+	while (i != n)
+	{
+		if (((unsigned char *)s)[i] == (unsigned char )c)
+		{
+//			b = (unsigned char *)&s[i];
+//			break ;
+			return ((void *)&((unsigned char *)s)[i]);
+		}
+		i++;
+	}
+	return (NULL);
+//	return (b);
+}
 
 // int main(){
 //     int    str_1[] = "damn time ";

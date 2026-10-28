@@ -11,13 +11,14 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 size_t	ft_strlcpy(char *dest, char *src, size_t n_size)
 {
 	size_t	i;
 
 	i = 0;
+	if (n_size == 0)
+		return (ft_strlen(src));
 	while (src[i] != '\0' && i <= n_size)
 	{
 		dest[i] = src[i];
