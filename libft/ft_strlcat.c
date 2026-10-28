@@ -16,7 +16,7 @@ void	ft_strlcat(char *dest, char *src, size_t size)
 {
 	size_t		i;
 	size_t		y;
-
+	
 	i = 0;
 	y = 0;
 	while (dest[i] != '\0')
@@ -30,12 +30,12 @@ void	ft_strlcat(char *dest, char *src, size_t size)
 	dest[i] = '\0';
 }
 
-int main(){
-    char    src[30] = "source";
-    char    dest[30] = "destination";
-    int     n;
+// int main(){
+//     char    src[30] = "source";
+//     char    dest[30] = "destination";
+//     int     n;
 
-    n = 0;
+//     n = 0;
 
-    ft_strlcat(dest , src, n);
-}
+//     ft_strlcat(dest , src, n);
+// }
