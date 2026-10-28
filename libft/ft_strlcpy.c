@@ -13,9 +13,9 @@
 #include "libft.h"
 #include <stdio.h>
 
-int	ft_strlcpy(char *dest, char *src, int n_size)
+size_t	ft_strlcpy(char *dest, char *src, size_t n_size)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (src[i] != '\0' && i < n_size)

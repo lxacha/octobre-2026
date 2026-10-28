@@ -6,7 +6,7 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:46:28 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/10/27 20:41:50 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/10/28 02:27:51 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strlen(const char *s1)
 {
-	int	a;
+	size_t	a;
 
 	a = 0;
 	while (s1[a] != '\0')

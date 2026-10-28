@@ -5,11 +5,19 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*poin;
 	
-	if (nmemb == 0 || size == 0)
-		return NULL;
-	poin = malloc(nmemb * size);
+	if (size >= 2147483647 / nmemb)
+		return (NULL);
+	else if (nmemb * size == 0)
+		poin = malloc(0);
+	else
+		poin = malloc(nmemb * size);
+	if (!poin)
+		return (NULL);
+	ft_bzero(poin, size * nmemb);
 	return (poin);
 }
+
+// avec bzero , ecrire dans l'espace allouer
 /*
 int	main(){
 	void	*pointer;

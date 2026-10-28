@@ -7,11 +7,12 @@ char	*ft_strdup(const char *s)
 	int		i;
 
 	i = 0;
-	dup = malloc(sizeof(char) * ft_strlen(s));
+	dup = malloc(sizeof(char) * (ft_strlen(s)+1));
 	while (s[i] != '\0'){
 		dup[i] = s[i];
 		i++;
 	}
+	dup[i] = '\0';
 	return (dup);
 }
 

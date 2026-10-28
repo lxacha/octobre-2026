@@ -13,15 +13,24 @@
 #include <stdio.h>
 #include "libft.h"
 
-char	*ft_strchr(char *str, int c)
+char	*ft_strchr(const char *str, int c)
 {
-	char	*point_f;
+	const char	*point_f;
 	int		i;
+	int		bool1;
 
+	bool1 = 0;
 	i = 0;
 	point_f = NULL;
-	while (str[i] != '\0')
+	if (str[0] == '\0' && c == 0)
+		point_f = &str[0];
+	while (str[i] != '\0' )
 	{
+		if (str[i+1] == '\0' && c == 0)
+		{
+			point_f = &str[i+1];
+			return ((char *)point_f);
+		}
 		if (str[i] == c)
 		{
 			point_f = &str[i];
@@ -29,14 +38,13 @@ char	*ft_strchr(char *str, int c)
 		}
 		i++;
 	}
-	return (point_f);
+	return ((char *)point_f);
 }
-/*
-int main(){
-    char    str1[20] = "str nbr 1 ...";
-    char    a;
 
-    a = 'n';
-    ft_strchr(str1,a);
-}
-*/
+// int main(){
+//     char    str1[20] = "str nbr 1 ...";
+//     char    a;
+
+//     a = '\0';
+//     ft_strchr(str1,a);
+// }

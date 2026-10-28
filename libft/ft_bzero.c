@@ -6,18 +6,21 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:44:05 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/10/26 14:43:17 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/10/28 02:17:37 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(char *a, int n)
+void	ft_bzero(void *a, size_t n)
 {
+	size_t		i;
+
+	i = 0;
 	while (n != 0)
 	{
-		a[0] = '\0';
-		a++;
+		((char *)a)[i] = '\0';
+		i++;
 		n--;
 	}
 }

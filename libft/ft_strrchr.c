@@ -6,22 +6,20 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:46:55 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/10/27 21:27:55 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/10/28 03:11:00 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int		i;
 	char	*d;
 
-	i = 0;
+	i = ft_strlen(s);
 	d = NULL;
-	while (s[i] != '\0')
-		i++;
-	while (i != 0)
+	while (i >= 0)
 	{
 		if (s[i] == c)
 		{
@@ -30,7 +28,7 @@ char	ft_strrchr(const char *s, int c)
 		}
 		i--;
 	}
-	return (*d);
+	return (d);
 }
 /*
 int main(){
