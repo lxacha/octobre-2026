@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
+
 char **ft_split(char const *s, char c)
 {
 	char	**phrases;
@@ -14,16 +15,15 @@ char **ft_split(char const *s, char c)
 	d = 0;
 	m = ft_strlen(s);
 	phrases = malloc(sizeof(char *) * (m + 10));
-
 	while (s[i] != '\0')
 	{
 		phrases[y] = malloc(sizeof(char *) * (m + 10));
-
-		while (s[i] != c && s[i] != '\0'){
+		while (s[i] != c && s[i+1] != '\0'){
 			phrases[y][d] = s[i];
 			d++;
 			i++;
 		}
+		phrases[y][d] = '\0';
 		d = 0;
 		y++;
 		i++;
@@ -35,5 +35,11 @@ char **ft_split(char const *s, char c)
 // {
 // 	char *s1 = "this is ,phrase one, phrase two , ...";	
 // 	char	c = ',';
-// 	ft_split(s1, c);
+// 	char	**damn;
+
+	
+// 	damn = ft_split(s1, c);
+
+// 	free(damn);
+
 // }
