@@ -6,7 +6,7 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:43:27 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/10/28 13:12:42 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/10/30 20:13:04 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,25 +54,25 @@ int	ft_atoi(const char *nptr)
 	return (converted);
 }
 
-int main(){
-    char    *phrase = "  -2145";
-	char	*phrase1 = "-+344345";
-	char	*phrase2 = "-asdf300000";
-	char	*phrase3 = "4444sdf32";
-	char	*phrase4 = " 999";
+// int main(){
+//     char    *phrase = "  -2145";
+// 	char	*phrase1 = "-+344345";
+// 	char	*phrase2 = "-asdf300000";
+// 	char	*phrase3 = "4444sdf32";
+// 	char	*phrase4 = " 999";
 
-    printf("yours : %d\n ",ft_atoi(phrase));
-    printf("true : %d\n\n",atoi(phrase));
+//     printf("yours : %d\n ",ft_atoi(phrase));
+//     printf("true : %d\n\n",atoi(phrase));
 
-	printf("yours : %d\n",ft_atoi(phrase1));
-    printf("true : %d\n\n",atoi(phrase1));
+// 	printf("yours : %d\n",ft_atoi(phrase1));
+//     printf("true : %d\n\n",atoi(phrase1));
 
-    printf("yours : %d\n",ft_atoi(phrase2));
-    printf("true : %d\n\n",atoi(phrase2));
+//     printf("yours : %d\n",ft_atoi(phrase2));
+//     printf("true : %d\n\n",atoi(phrase2));
     
-	printf("yours : %d\n",ft_atoi(phrase3));
-    printf("true : %d\n\n",atoi(phrase3));
+// 	printf("yours : %d\n",ft_atoi(phrase3));
+//     printf("true : %d\n\n",atoi(phrase3));
     
-	printf("yours : %d\n",ft_atoi(phrase4));
-    printf("true : %d\n",atoi(phrase4));
-}
+// 	printf("yours : %d\n",ft_atoi(phrase4));
+//     printf("true : %d\n",atoi(phrase4));
+// }
