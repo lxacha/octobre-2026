@@ -25,7 +25,7 @@ void	*ft_memset(char *a, int c, int n)
 		i++;
 		n--;
 	}
-	return (a);
+	return (point);
 }
 
 // int main(){

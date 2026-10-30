@@ -12,30 +12,32 @@
 
 #include "libft.h"
 #include <stdio.h>
+#include <string.h>
 
 size_t	ft_strlcat(char *dest, char *src, size_t size)
 {
+	size_t		ind_dest;
+	size_t		ind_src;
 	size_t		i;
-	size_t		y;
-	
-	i_len = 0;
-	y = 0;
-	if (size == 0)
-		return (ft_strlen(src));
-	if (size == (size_t)ft_strlen(dest))
-		return (ft_strlen(src) + ft_strlen(dest));
-	if (size < (size_t)ft_strlen(dest))
-		return (size + ft_strlen(src));
-	while (dest[i] != '\0')
-		i++;
-	while (src[y] != '\0' && y + ft_strlen(dest) <= size)
+	size_t		x;
+
+	ind_dest = ft_strlen(dest);
+	ind_src = ft_strlen(src);
+	i = 0;
+	x = ind_dest;
+	if (ind_dest < size -1 && size > 0)
 	{
-		dest[i] = src[y];
-		i++;
-		y++;
+		while(src[i] && ind_dest + i < size - 1)
+		{
+			dest[x] = src[i];
+			i++;
+			x++;
+		}
+		dest[x] = '\0';
 	}
-	dest[i] = '\0';
-	return (i); // to avoid tester warning
+	if (ind_dest >= size)
+		ind_dest = size;
+	return (ind_dest + ind_src);
 }
 
 // size_t	ft_strlcat(char *dst, const char *src, size_t size)
@@ -80,8 +82,8 @@ size_t	ft_strlcat(char *dest, char *src, size_t size)
 // 	char    src1b[30] = "12341234";
 //     char    dest1b[30] = "destination";
 
-// 	char    src2b[30] = "fuckksdfkljasdsource";
-//     char    dest2b[15] = "destina\0tion";
+// 	char    src2b[] = "lorem ipsum dolor sit amet";
+//     char    dest2b[] = "rrrrrrrrrrrrrrr"; // 31
 
 //     int     n;
 //     int     n1;
@@ -90,7 +92,7 @@ size_t	ft_strlcat(char *dest, char *src, size_t size)
 
 //     n = 0;
 //     n1 = 2;
-//     n2 = 40;
+//     n2 = 5;
 	
 
 //     printf("yours : %zu \n",ft_strlcat(dest , src, n));
