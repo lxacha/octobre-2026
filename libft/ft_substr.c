@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include "libft.h"
+#include <stdio.h>
 
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
@@ -7,13 +8,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	unsigned long		i;
 	char	*a;
 	i = 0;
-	a = malloc(sizeof(char) * len + 1);
-	if (len <= 0)
+	
+	if (len <= 0 || start > (unsigned int)ft_strlen(s))
 	{
 		a = "";
 		return (a);
 	}
-	while (i < len)
+	a = malloc(sizeof(char) * len + 10);
+	while (i < len && s[i+start])
 	{
 		a[i] = s[i+start];
 		i++;
@@ -22,13 +24,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (a);
 }
 
-// int main()
-// {
-// 	int		subs_start;
-// 	int		subs_end;
-// 	char	*phrase1 = "phrase n 1";
+int main()
+{
+	int		subs_start;
+	int		subs_end;
+	char	*phrase1 = "phrase n 1";
 
-// 	subs_start = 7;
-// 	subs_end = 3;
-// 	ft_substr(phrase1, subs_start, subs_end);
-// }
+	subs_start = 7;
+	subs_end = 1;
+	printf("%s",ft_substr(phrase1, subs_start, subs_end));
+}
