@@ -1,6 +1,24 @@
 // #include <stdlib.h>
 // #include "libft.h"
 
+//char		*trim_before_split(char const *str, char const c){
+//{
+	// declare tokens[][];
+	// check if str !NULL;
+	// malloc tokens;
+		// calculate numbers of array in tokens; 	memchr
+		// calculate size of each tokens 
+		// attribute number of tokens
+		// attribute each tokens size
+	// write in tokens
+		//iterate through tokens[x][] while *str
+			//iterate through tokens[][x]
+			// write str[x] in tokens[][x]		 memcpy
+		// write NULL byte tokens[][x]
+	// return **tokens
+	
+//}
+
 // char		*trim_before_split(char const *str, char const c){
 // 	char	*a;
 // 	char	*trimmed;
