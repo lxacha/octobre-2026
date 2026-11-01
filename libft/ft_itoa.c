@@ -1,6 +1,6 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include "libft.h"
+// #include <stdlib.h>
+// #include <stdio.h>
+// #include "libft.h"
 
 // char 	*ft_itoa(int n)
 // {
@@ -29,9 +29,9 @@
 // 	return (final_s);
 // }
 
-// int		main(){
-// 	int		a;
+// // int		main(){
+// // 	int		a;
 
-// 	a = 234;
-// 	ft_itoa(a);
-// }
+// // 	a = 234;
+// // 	ft_itoa(a);
+// // }

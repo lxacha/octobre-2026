@@ -26,6 +26,8 @@ static const char	*calc_len_token(const char *str, char sep)
 		str++;
 	while(*str && *str != sep )
 		str++;
+	while (*str == sep)
+		str++;
 	return (str);
 }
 
@@ -38,6 +40,8 @@ static void 	write_in_x_y(char **tokens, size_t x,const char *trimmed, const cha
 		cursor++;
 	while (cursor != trimmed )
 	{
+		if (*cursor == c)
+			break ;
 		tokens[x][y] = *cursor;
 		cursor++;
 		y++;
@@ -60,7 +64,7 @@ static char 	*to_str(char c)
 
 char	**ft_split(char const *s, char c)
 {
-	char	**tokens;
+	char		**tokens;
 	const char	*trimmed;
 	const char	*cursor;
 	char		*set_trim;
@@ -68,11 +72,14 @@ char	**ft_split(char const *s, char c)
 
 	x = 0;
 	set_trim = to_str(c);
-	trimmed = ft_strtrim(s, set_trim);
-	if (!trimmed || !s)
+	if (!s)
 		return (NULL);
+	trimmed = ft_strtrim(s, set_trim);
+	char *test = (char *)trimmed;
 	cursor = trimmed;
-	tokens = malloc(ft_strlen(trimmed) * (sizeof(char) + 4));
+	tokens = malloc((ft_strlen(trimmed) + 4) * (sizeof(char *) + 4));
+	if (!tokens)
+		return (NULL);
 	while (*trimmed)
 	{
 		trimmed = calc_len_token(trimmed , c);
@@ -81,11 +88,37 @@ char	**ft_split(char const *s, char c)
 		cursor = trimmed;
 		x++;
 	}
-	tokens[x] = NULL;
+	tokens[x] = '\0';
 	free(set_trim);
+	free(test);
 	return (tokens);
 }
 
+
+// char	**ft_split(lalala les args)
+// {
+// 	if (!s)
+// 		return (NULL);
+// 	int words = compte_mots();
+// 	char	**ret = ft_calloc(words + 1, sizeof(char *));
+// 	if (!ret)
+// 		return (NULL);
+// 	int word = 0;
+// 	for (int i = 0; s[i]; ++i)
+// 	{
+// 		ignorer sep;
+// 		point de depart save;
+// 		ignore les non seps;
+// 		point de end;
+// 		ret[word] = ft_substr(point de depart, point de end - point de start);
+// 		if (!ret[word++])
+// 		{
+// 			tout free ! (char ** et char * precedents);
+// 			return (NULL);
+// 		}
+// 	}
+// 	return (ret);
+// }
 
 // char		*trim_before_split(char const *str, char const c){
 // 	char	*a;
@@ -123,22 +156,16 @@ char	**ft_split(char const *s, char c)
 // 	return (phrases);
 // }
 
-// int		main()
-// {
-
-// 	char *s1 = "--1-2--3---4----5-----42";	
-// 	char	c = '-';
-// 	char	**damn;
-
-	
-// 	damn = ft_split(s1, c);
-
-// 	free(damn[0]);
-// 	free(damn[1]);
-// 	free(damn[2]);
-// 	free(damn[3]);
-// 	free(damn[4]);
-// 	free(damn[5]);
-// 	free(damn[6]);
-// 	free(damn);
-// }
+#include <stdio.h>
+int main()
+{
+	char	**test = ft_split("a", ',');
+	if (!test)
+		return (1);
+	for (int i = 0; test[i]; ++i)
+		printf("%s\n", test[i]);
+	for (int i = 0; test[i]; ++i)
+		free(test[i]);
+	free(test);
+	return (0);
+}
