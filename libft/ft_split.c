@@ -156,16 +156,16 @@ char	**ft_split(char const *s, char c)
 // 	return (phrases);
 // }
 
-#include <stdio.h>
-int main()
-{
-	char	**test = ft_split("a", ',');
-	if (!test)
-		return (1);
-	for (int i = 0; test[i]; ++i)
-		printf("%s\n", test[i]);
-	for (int i = 0; test[i]; ++i)
-		free(test[i]);
-	free(test);
-	return (0);
-}
+// #include <stdio.h>
+// int main()
+// {
+// 	char	**test = ft_split("a", ',');
+// 	if (!test)
+// 		return (1);
+// 	for (int i = 0; test[i]; ++i)
+// 		printf("%s\n", test[i]);
+// 	for (int i = 0; test[i]; ++i)
+// 		free(test[i]);
+// 	free(test);
+// 	return (0);
+// }
