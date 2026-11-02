@@ -10,7 +10,7 @@ SOURCES = ft_isprint.c ft_putendl_fd.c ft_strlcat.c ft_substr.c \
           ft_isalpha.c ft_memmove.c ft_strdup.c ft_strnstr.c \
           ft_isascii.c ft_memset.c ft_striteri.c ft_strrchr.c \
           ft_isdigit.c ft_putchar_fd.c ft_strjoin.c ft_strtrim.c\
-          ft_lstnew.c
+          ft_lstnew.c ft_lstadd_front.c ft_lstsize.c
 
 OBJECTS = $(SOURCES:.c=.o)
 

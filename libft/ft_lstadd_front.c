@@ -3,29 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/02 12:41:38 by marvin            #+#    #+#             */
-/*   Updated: 2026/11/02 12:41:38 by marvin           ###   ########.fr       */
+/*   Created: 2026/11/02 14:12:25 by leolefeb          #+#    #+#             */
+/*   Updated: 2026/11/02 14:12:25 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "libft.h"
 
-void    ft_lstadd_front(t_list **lst, t_list *new)
+void    ft_lstadd_front(t_list **lst, t_list *newl)
 {
-    if (!lst || !new)
-        return ;
-    lst->next = new;
+	if (!lst || !*lst)
+		return ;
+	newl->next = *lst;
+	*lst = newl;
 }
 
-int main()
-{
-    t_list  *node1;
-    t_list  *node2;
+// int main()
+// {
+//     t_list  **node1;
+//     t_list  *node2;
 
-    node1 = ft_lstnew("node nb 1");
-    node2 = ft_lstnew("node nb 2");
+//     *node1 = ft_lstnew("node nb 1");
+//     node2 = ft_lstnew("node nb 2");
 
-    ft_lstadd_front(node1,node2);
-}
+//     ft_lstadd_front(node1,node2);
+// 	return (0);
+// }
