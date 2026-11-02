@@ -12,12 +12,40 @@
 
 #include "libft.h"
 
+// t_list	*ft_lstlast(t_list *lst)
+// {
+
+// }
+
+
+// int main()
+// {
+// 	t_list *node1;
+// 	t_list *node2;
+
+// 	node1 = ft_lstnew("phrase nb 1");
+
+// }
+
+
 int main()
 {
+	t_list	**node1;
+	t_list	*node2;
+	t_list	*node3;
 
-}
+	char	*a;
 
-t_list	*ft_lstsize(t_list *lst)
-{
+	node1 = malloc(sizeof(t_list));
+	a = ft_strdup("hello");
+	*node1 = ft_lstnew(a);
+	node2 = ft_lstnew("node nb 2");
+	node3 = ft_lstnew("node nb 3");
 
+	ft_lstadd_front(node1, node2);
+	ft_lstadd_front(node1, node3);
+	ft_lstsize(*node1);
+//	ft_lstlast(node1);
+
+	return (0);
 }
