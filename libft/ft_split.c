@@ -85,10 +85,9 @@ char	**ft_split(char const *s, char c)
 		trimmed = calc_len_token(trimmed , c);
 		tokens[x] = malloc((trimmed - cursor) * (sizeof(char) + 4));
 		write_in_x_y(tokens, x ,trimmed , cursor , c);
-		cursor = trimmed;
 		x++;
 	}
-	tokens[x] = '\0';
+	tokens[x] = NULL;
 	free(set_trim);
 	free(test);
 	return (tokens);

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/02 14:12:25 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/11/02 14:12:25 by leolefeb         ###   ########.fr       */
+/*   Created: 2026/11/02 20:21:51 by leolefeb          #+#    #+#             */
+/*   Updated: 2026/11/02 20:21:51 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void    ft_lstadd_front(t_list **lst, t_list *newl)
 {
-	if (!lst || !*lst)
+	if (!lst || !*lst || !newl)
 		return ;
 	newl->next = *lst;
 	*lst = newl;
