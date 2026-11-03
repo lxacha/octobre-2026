@@ -6,26 +6,24 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:45:53 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/10/28 00:27:34 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/11/03 19:18:02 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(char *a, int c, int n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	int	i;
-	void	*point;
+	size_t	i;
 
-	point = &a;
 	i = 0;
 	while (n != 0)
 	{
-		a[i] =  (char)c;
+		((unsigned char *)s)[i] = (unsigned char)c;
 		i++;
 		n--;
 	}
-	return (point);
+	return (s);
 }
 
 // int main(){
