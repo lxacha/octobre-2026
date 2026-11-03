@@ -1,0 +1,8 @@
+
+create new node dup ft_lstnew
+using ft_lstlast retrieve last node content
+copy content to dup f(strdup)
+delete last node 
+if !first_node 
+	lst_add_front 
+
