@@ -1,37 +1,50 @@
-// #include <stdlib.h>
-// #include <stdio.h>
-// #include "libft.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include "libft.h"
 
-// char 	*ft_itoa(int n)
-// {
-// 	int		i;
-// 	int		y;
-// 	char	*s;
-// 	char	*final_s;
+#include "libft.h"
 
-// 	i = 0;
-// 	y = 0;
-// 	s = malloc(sizeof(char) * n);
-// 	final_s = malloc(sizeof(char) * n);
-// 	while ( n != 0)
-// 	{
-// 		s[i] = (n%10) + '0';
-// 		n = n/10;
-// 		i++;
-// 	}
-// 	i--;
-// 	while (i != -1)
-// 	{
-// 		final_s[y] = s[i];
-// 		y++;
-// 		i--;
-// 	}
-// 	return (final_s);
-// }
+static size_t	count_len(long n)
+{
+	size_t	len;
 
-// // int		main(){
-// // 	int		a;
+	len = 1;
+	if (n < 0)
+	{
+		len++;
+		n = -n;
+	}
+	while (n >= 10)
+	{
+		n /= 10;
+		len++;
+	}
+	return (len);
+}
 
-// // 	a = 234;
-// // 	ft_itoa(a);
-// // }
+char	*ft_itoa(int n)
+{
+	char	*s;
+	long	nb;
+	size_t	len;
+
+	nb = n;
+	len = count_len(nb);
+	s = malloc(len + 1);
+	if (!s)
+		return (NULL);
+	s[len] = '\0';
+	if (nb < 0)
+	{
+		s[0] = '-';
+		nb = -nb;
+	}
+	s[--len] = (nb % 10) + '0';
+	nb /= 10;
+	while (nb > 0)
+	{
+		s[--len] = (nb % 10) + '0';
+		nb /= 10;
+	}
+	return (s);
+}

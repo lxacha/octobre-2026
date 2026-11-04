@@ -14,45 +14,70 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int	ft_atoi(const char *nptr)
+int		ft_atoi(const char *str)
 {
-	int		i;
-	int		y;
-	int		converted;
-	int		neg;
-	int		start_digi;
+	int c;
+	int s;
+	int res;
 
-	neg = 1;
-	start_digi = 0;
-	i = 0;
-	y = 1;
-	converted = 0;
-	while (nptr[i] != '\0')
+	c = 0;
+	s = 1;
+	res = 0;
+	while (str[c] == ' ' || str[c] == '\n' || str[c] == '\t' ||
+			str[c] == '\v' || str[c] == '\f' || str[c] == '\r')
+		c++;
+	if (str[c] == '-' || str[c] == '+')
 	{
-		if ((nptr[i] == 43 || nptr[i] == 32 || (nptr[i] >= 9  && nptr[i] <= 13)) && ( start_digi == 0))
-		{
-			i++;
-			continue;
-		}
-		if ((nptr[i] == '-') && start_digi == 0 && neg != -1){
-			neg = neg * -1;
-			i++;
-			continue;
-		}
-		if (nptr[i] >= 48 && nptr[i] <= 57 )
-		{
-			start_digi = 1;
-			converted = (converted * y) + nptr[i] - '0';
-			if (y == 1)
-				y = y * 10;
-		}
-		else
-			break ;
-		i++;
+		if (str[c] == '-')
+			s = -1;
+		c++;
 	}
-	converted = converted * neg;
-	return (converted);
+	while (str[c] >= '0' && str[c] <= '9')
+	{
+		res = (res * 10) + (str[c] - '0');
+		c++;
+	}
+	return (res * s);
 }
+
+// int	ft_atoi(const char *nptr)
+// {
+// 	int		i;
+// 	int		y;
+// 	int		converted;
+// 	int		neg;
+
+
+// 	// s = neg , c = i , res = converted
+
+// 	neg = 1;
+// 	start_digi = 0;
+// 	i = 0;
+// 	y = 1;
+// 	converted = 0;
+// 	while (nptr[i] != '\0')
+// 	{
+// 		while ((nptr[i] == 43 || nptr[i] == 32 || (nptr[i] >= 9  && nptr[i] <= 13)) && ( start_digi == 0))
+// 			i++;
+// 		while ((nptr[i] == '-') && start_digi == 0 && neg != -1)
+// 		{
+// 			neg = -1;
+// 			i++;
+// 		}
+// 		if (nptr[i] >= 48 && nptr[i] <= 57 )
+// 		{
+// 			start_digi = 1;
+// 			converted = (converted * y) + nptr[i] - '0';
+// 			if (y == 1)
+// 				y = y * 10;
+// 		}
+// 		else
+// 			break ;
+// 		i++;
+// 	}
+// 	converted = converted * neg;
+// 	return (converted);
+// }
 
 // int main(){
 //     char    *phrase = "  -2145";

@@ -20,77 +20,69 @@
 	
 //}
 
-static const char	*calc_len_token(const char *str, char sep)
-{
-	while (*str == sep)
-		str++;
-	while(*str && *str != sep )
-		str++;
-	while (*str == sep)
-		str++;
-	return (str);
-}
+#include "libft.h"
 
-static void 	write_in_x_y(char **tokens, size_t x,const char *trimmed, const char *cursor, char c)
+static size_t	count_words(const char *s, char c)
 {
-	size_t		y;
+	size_t	count;
 
-	y = 0;
-	while (*cursor == c)
-		cursor++;
-	while (cursor != trimmed )
+	count = 0;
+	while (*s)
 	{
-		if (*cursor == c)
-			break ;
-		tokens[x][y] = *cursor;
-		cursor++;
-		y++;
+		while (*s == c)
+			s++;
+		if (*s)
+			count++;
+		while (*s && *s != c)
+			s++;
 	}
-	tokens[x][y] = '\0'; 
+	return (count);
 }
 
-static char 	*to_str(char c)
+static char	**free_all(char **tokens, size_t n)
 {
-	char 	*str_set;
-
-	str_set = malloc(2);
-	if (!str_set)
-		return (NULL);
-	str_set[0] = c;
-	str_set[1] = '\0';
-	return (str_set);
+	while (n--)
+		free(tokens[n]);
+	free(tokens);
+	return (NULL);
 }
 
+static char	**fill_tokens(char **tokens, const char *s, char c)
+{
+	size_t	i;
+	size_t	len;
+
+	i = 0;
+	while (*s)
+	{
+		while (*s == c)
+			s++;
+		len = 0;
+		while (s[len] && s[len] != c)
+			len++;
+		if (len)
+		{
+			tokens[i] = ft_substr(s, 0, len);
+			if (!tokens[i])
+				return (free_all(tokens, i));
+			i++;
+		}
+		s += len;
+	}
+	tokens[i] = NULL;
+	return (tokens);
+}
 
 char	**ft_split(char const *s, char c)
 {
-	char		**tokens;
-	const char	*trimmed;
-	const char	*cursor;
-	char		*set_trim;
-	size_t		x;
+	char	**tokens;
 
-	x = 0;
-	set_trim = to_str(c);
 	if (!s)
 		return (NULL);
-	trimmed = ft_strtrim(s, set_trim);
-	char *test = (char *)trimmed;
-	cursor = trimmed;
-	tokens = malloc((ft_strlen(trimmed) + 4) * (sizeof(char *) + 4));
+	tokens = malloc((count_words(s, c) + 1) * sizeof(char *));
 	if (!tokens)
 		return (NULL);
-	while (*trimmed)
-	{
-		trimmed = calc_len_token(trimmed , c);
-		tokens[x] = malloc((trimmed - cursor) * (sizeof(char) + 4));
-		write_in_x_y(tokens, x ,trimmed , cursor , c);
-		x++;
-	}
-	tokens[x] = NULL;
-	free(set_trim);
-	free(test);
-	return (tokens);
+	return (fill_tokens(tokens, s, c));
 }
 
 

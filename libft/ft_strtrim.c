@@ -27,7 +27,7 @@ size_t		start_ite(char const *s1B, char const *setB, size_t start_ind)
 			break;
 		}
 	}
-	return ite_charB;
+	return (ite_charB);
 }
 size_t		start_end(char const *s1C, char const *setC, size_t end, size_t ind_end_st)
 {
@@ -51,33 +51,32 @@ size_t		start_end(char const *s1C, char const *setC, size_t end, size_t ind_end_
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t		i;
-	size_t		y;
-	size_t		ite_char;
-	size_t		end;
+	size_t	i;
+	size_t	y;
+	size_t	ite_char;
+	size_t	end;
 	char	*cop;
-	
+
 	i = 0;
 	y = 0;
 	if (!s1)
 		return (NULL);
 	if (!set)
-		return((char *)s1);
+		return (ft_strdup(s1));
 	end = ft_strlen(s1);
-	ite_char = start_ite(s1 , set , i) ;
-	i = start_end(s1 , set, end, ite_char);
-	// function count ite_char remaining in end if there is otherw = NULL;
+	ite_char = start_ite(s1, set, i);
+	i = start_end(s1, set, end, ite_char);
 	cop = malloc(sizeof(char) * (i - ite_char) + 1);
-	while (ite_char < i )
+	if (!cop)
+		return (NULL);
+	while (ite_char < i)
 	{
-		if (ft_strlen(s1) == 0)
-			break;
 		cop[y] = s1[ite_char];
 		y++;
-		ite_char++;		
+		ite_char++;
 	}
 	cop[y] = '\0';
-	return cop;
+	return (cop);
 }
 
 
