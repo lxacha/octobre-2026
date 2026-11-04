@@ -14,11 +14,11 @@
 #include <stdio.h>
 #include <string.h>
 
-size_t	ft_strlcat(char *dest, char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	size_t		ind_dest;
-	size_t		ind_src;
-	size_t		i;
+	size_t	ind_dest;
+	size_t	ind_src;
+	size_t	i;
 
 	ind_src = ft_strlen(src);
 	ind_dest = 0;
@@ -27,12 +27,12 @@ size_t	ft_strlcat(char *dest, char *src, size_t size)
 		ind_dest++;
 	if (ind_dest == size)
 		return (size + ind_src);
-	while(src[i] && ind_dest + i < size - 1)
+	while (src[i] && ind_dest + i < size - 1)
 	{
 		dest[ind_dest + i] = src[i];
-		i++;		
+		i++;
 	}
-	dest[ind_dest + i]= '\0';
+	dest[ind_dest + i] = '\0';
 	return (ind_dest + ind_src);
 }
 
