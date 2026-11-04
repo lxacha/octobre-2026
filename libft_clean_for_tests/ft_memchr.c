@@ -1,0 +1,38 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/25 22:45:14 by leolefeb          #+#    #+#             */
+/*   Updated: 2026/10/28 07:04:26 by leolefeb         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+#include "libft.h"
+
+void	*ft_memchr(const void *s, int c, size_t n)
+{
+	size_t		i;
+
+	i = 0;
+	while (i != n)
+	{
+		if (((unsigned char *)s)[i] == (unsigned char)c)
+			return ((void *)&((unsigned char *)s)[i]);
+		i++;
+	}
+	return (NULL);
+}
+
+// int main(){
+//     char    str_1[] = "damn time ";
+//     char    a;
+//     int     size_a;
+//
+//     size_a = 4;
+//     a = 'a';
+//     ft_memchr(str_1, 6, 6);
+//
+//     return 0;
+// }

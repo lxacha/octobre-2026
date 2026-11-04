@@ -1,0 +1,47 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/28 17:16:42 by leolefeb          #+#    #+#             */
+/*   Updated: 2026/10/28 17:16:42 by leolefeb         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+#include "libft.h"
+
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	char	*conc_s1_s2;
+	int		i;
+	int		j;
+	int		y;
+
+	if (!s1 || !s2)
+		return (NULL);
+	i = 0;
+	j = 0;
+	y = ft_strlen(s1) + ft_strlen(s2) + 1;
+	conc_s1_s2 = malloc(sizeof(char) * y);
+	if (!conc_s1_s2)
+		return (NULL);
+	while (s1[i] != '\0')
+	{
+		conc_s1_s2[i] = s1[i];
+		i++;
+	}
+	while (s2[j] != '\0')
+		conc_s1_s2[i++] = s2[j++];
+	conc_s1_s2[i] = '\0';
+	return (conc_s1_s2);
+}
+
+// int	main()
+// {
+// 	char	*s1 = "phrase n1";
+// 	char	*s2 = " phrase n2";
+//
+// 	ft_strjoin(s1, s2);
+// 	return (0);
+// }
