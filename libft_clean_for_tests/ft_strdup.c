@@ -6,9 +6,10 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/28 17:16:51 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/10/28 17:16:51 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/11/05 04:36:02 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strdup(const char *s)

@@ -6,7 +6,7 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:45:44 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/10/28 00:46:25 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/11/05 01:35:21 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -17,9 +17,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n_size)
 	unsigned char		*d;
 	const unsigned char	*s;
 
-	if (!src)
-		return (dest);
-	if (!dest)
+	if (!src && !dest)
 		return (NULL);
 	d = (unsigned char *)dest;
 	s = (const unsigned char *)src;

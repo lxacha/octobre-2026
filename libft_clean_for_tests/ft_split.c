@@ -6,7 +6,7 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 12:00:00 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/11/03 12:00:00 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/11/05 04:37:50 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,9 +99,3 @@ char	**ft_split(char const *s, char c)
 	free(trimmed);
 	return (tokens);
 }
-
-// first idea (kept):
-// declare tokens[][]; check if str !NULL; trim str; malloc tokens;
-// calculate numbers of array in tokens; calculate size of each tokens;
-// write in tokens: iterate tokens[x][] while *str, write str[x] in
-// tokens[][x]; write NULL byte; return **tokens

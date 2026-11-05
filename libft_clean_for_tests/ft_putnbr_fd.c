@@ -6,7 +6,7 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 12:00:00 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/11/03 12:00:00 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/11/05 04:41:39 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,23 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	int		i;
-	char	*s_i;
+	char	c;
 
-	i = 0;
-	s_i = ft_itoa(n);
-	if (!s_i)
-		return ;
-	while (s_i[i] != '\0')
+	if (n == -2147483648)
 	{
-		write(fd, &s_i[i], 1);
-		i++;
+		write(fd, "-2147483648", 11);
+		return ;
 	}
-	free(s_i);
+	else if (n < 0)
+	{
+		write(fd, "-", 1);
+		n = -n;
+	}
+	if (n > 9)
+		ft_putnbr_fd(n / 10, fd);
+	c = (n % 10) + '0';
+	write(fd, &c, 1);
 }
-
 // int	main()
 // {
 // 	int		a;

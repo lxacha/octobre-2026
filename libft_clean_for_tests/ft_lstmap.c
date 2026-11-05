@@ -6,9 +6,10 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 01:18:59 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/11/03 02:20:14 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/11/05 04:30:51 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
@@ -36,7 +37,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	return (dup);
 }
 
-// first draft (kept):
 // void	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 // {
 // 	t_list	**dup;

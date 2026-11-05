@@ -6,20 +6,11 @@
 /*   By: leolefeb <leolefeb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/28 17:24:33 by leolefeb          #+#    #+#             */
-/*   Updated: 2026/10/28 17:24:33 by leolefeb         ###   ########.fr       */
+/*   Updated: 2026/11/05 04:48:56 by leolefeb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
 
-// static char	function_n_1(unsigned int d,char a)
-// {
-// 	a = 'B';
-// 	if (d >= 0)
-// 	{
-// 		return a;
-// 	}
-// 	return a;
-// }
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -40,7 +31,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	new_str[i] = '\0';
 	return (new_str);
 }
-
 // int main(){
 // 	char	*a = "AAAAAAAAAA";
 // 	ft_strmapi(a,function_n_1);
